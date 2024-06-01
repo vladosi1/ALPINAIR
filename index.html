@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./img/faviconAlpinAir.svg" type="image/x-icon" sizes="32x32">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prosto+One&display=swap" rel="stylesheet">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- jQuery Inview Plugin -->
+	<script src="https://cdn.jsdelivr.net/jquery.inview/1.1.2/jquery.inview.min.js"></script>
+	<!-- jQuery Spincrement Plugin -->
+	<script src="https://cdn.jsdelivr.net/jquery.spincrement/1.0.4/jquery.spincrement.min.js"></script>
+	<!-- fancybox -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	
+	<!-- Slider-->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="./css/style.css">
+	<title>ALPINAIR</title>
+</head>
+<!-- started 11.10.23 -->
+<body>
+
+		<header id="header" class="header">
+				<div style="display: none;" id="popup">
+					<div class="form-title">Швидке замовлення</div>
+					<div class="form-note">
+						<span class="text">Для швидкого замовлення товару заповніть форму нижче та надішліть заявку.</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Ваше ім’я:</label>
+						<div class="controls">
+							<input class="form-control name" type="text" name="name" autocomplete="off" value="" placeholder="Ваше ім’я">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Ваш номер телефону:</label>
+						<div class="controls">
+							<input class="form__input phone form-control cellphone" type="tel" name="phone" placeholder="+380 (__) ___-__-__" required><br>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Ваш E-mail:</label>
+						<div class="controls">
+							<input class="form__input form-control" type="email" name="email" placeholder="example@gmail.com" required><br>
+						</div>
+					</div>
+					<button class="btn btn-default btn-submit" title="Заказать без оформления">
+						<span class="text">Надіслати</span>
+					</button>
+				</div>
+			<div class="gradient-overlay">
+			<div class="container">
+	
+				<nav class="nav">
+							<div class="header__logo">
+								<a href="#"><img src="./img/header__logp.svg" alt="Логотип"></a>
+							</div>
+							<div class="nav__box-list">
+								<ul>
+									<li><a class="hvr-underline-reveal" href="#">Gentle Wind</a></li>
+									<li><a class="hvr-underline-reveal" href="#">Особливості</a></li>
+									<li><a class="hvr-underline-reveal" href="#">Продукція</a></li>
+									<li><a class="hvr-underline-reveal" href="#">Функції</a></li>
+									<li><a class="hvr-underline-reveal" href="#">Наші переваги</a></li>
+								</ul>
+							</div>
+							<div class="nav__box-contacts">
+									<p>Контактний телефон:</p>
+									<a class="tel" id="tel" href="tel:+0800405911">0 800 405 911</a>
+							</div>
+				</nav>
+				<div class="header__description">
+					<h1>Оптимальний клімат для вашого дому!</h1>
+						<p class="header__subtitle">Адаптуйтеся до будь-яких погодних умов з легкістю завдяки технологіям, які забезпечують чисте і<br> свіже повітря кожен день. Обирайте ефективність, дизайн та надійність в одному пристрої.</p>
+						<a href="#products" class="default__btn сhoose__conditioner hvr-grow-shadow">Обрати кондиціонер</a>
+							<!-- <div class="header__main-img">
+								<img class="header__conditioner-img" src="./img/header__conditioner.png" alt="Кондиціонер">
+							</div> -->
+				</div>
+			</div>
+		</div>
+		<video muted loop playsinline autoplay id="video__bg">
+			<source src="./video/bg1.mp4">
+		</video>
+		</header>
+
+		<main class="main">
+			<div class="container">
+				<div class="main__title">
+					<h2 class="secondary__title">Технологія Gentle Wind</h2>
+				</div>
+					<p class="description">В режимі Gentle Wind вертикальні жалюзі закриваються,а мікро-отвори на них розсукають сильний<br> потік повітря, перетворюючи його на більш м’який.</p>
+				<div id="juxtapose-wrapper" class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="true" data-animate="true" style="margin: 0 auto">
+					<!--Images must always have the same dimensions (in this case 600px x 400px). -->
+					<img src="./img/1.jpg"> 
+					<img src="./img/2.jpg">
+				 </div>
+			</div>
+		</main>
+		<section class="jalousie">
+			<div class="contaimer">
+				<h2 class="secondary__title">Дані про жалюзі</h2>
+					<div class="jalousie__box">
+						<div class="jalousie__box-top">
+								<div class="jalousie__item jalousie__item1">
+									<span id="animated_number1">14</span>
+									<p>вертикальних жалюзі <br> у формі листків</p>
+								</div>	
+								<div class="jalousie__item jalousie__item2">
+									<span id="animated_number2">1372</span>
+									<p>мікро отворів<br>розміром 2-3 мм</p>
+								</div>	
+
+						</div>
+						<div class="jalousie__box-bottom">
+							<div class="jalousie__item jalousie__item-column jalousie__item3">
+								<h3>Розсіює повітря</h3>
+								<br>
+								<p>Перетворює дисперсний потік повітря на ніжний та м’який</p>
+							</div>	
+							<div class="jalousie__item jalousie__item-column jalousie__item4">
+								<h3>Ефект душу</h3>
+								<br>
+								<p>В режимі охолодження потік повітря опускається на користувача зверху</p>
+							</div>	
+							<div class="jalousie__item jalousie__item-column jalousie__item5">
+								<h3>Ефект ковдри</h3>
+								<br>
+								<p>В режимі обігріву тепле повітря краще розповсюджується по підлозі</p>
+							</div>	
+						</div>
+					</div>
+			</div>
+		</section>
+		<section class="features">
+			<div class="container">
+				<div class="main__title">
+					<h2 class="secondary__title">Особливості кондиціонерів</h2>
+				</div>
+				<p class="description">Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. 	Vel sagittis dapibus sodales a nunc<br> habitant cras. At nibh in mi nunc dui volutpat.
+				</p>
+				<div class="features__img">
+					<div class="features-box">
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_236_1888)">
+									<path d="M7.80417 22.531C6.80356 23.5316 6.80356 25.16 7.80417 26.1704C8.80478 27.1711 10.4332 27.1711 11.4437 26.1704C18.3695 19.2446 29.6411 19.2446 36.5669 26.1704C37.0672 26.6708 37.7245 26.9258 38.3817 26.9258C39.039 26.9258 39.6963 26.6708 40.1966 26.1704C41.1972 25.1698 41.1972 23.5414 40.1966 22.531C31.2695 13.5941 16.7312 13.5941 7.80417 22.531Z" fill="white"/>
+									<path d="M14.7495 29.4764C13.7489 30.477 13.7489 32.1055 14.7495 33.1159C15.7501 34.1165 17.3785 34.1165 18.389 33.1159C21.4791 30.0159 26.5214 30.0159 29.6115 33.1159C30.1118 33.6162 30.7691 33.8712 31.4264 33.8712C32.0836 33.8712 32.7409 33.6162 33.2412 33.1159C34.2418 32.1153 34.2418 30.4868 33.2412 29.4862C28.1499 24.3752 19.8506 24.3752 14.7495 29.4764Z" fill="white"/>
+									<path d="M23.9998 42.141C25.8907 42.141 27.4235 40.6082 27.4235 38.7174C27.4235 36.8265 25.8907 35.2937 23.9998 35.2937C22.109 35.2937 20.5762 36.8265 20.5762 38.7174C20.5762 40.6082 22.109 42.141 23.9998 42.141Z" fill="white"/>
+									<path d="M47.2495 15.4678C34.428 2.65604 13.572 2.65604 0.75046 15.4678C-0.250153 16.4684 -0.250153 18.0969 0.75046 19.1073C1.75107 20.1079 3.37952 20.1079 4.38995 19.1073C15.2005 8.28694 32.7995 8.28694 43.6199 19.1073C44.1202 19.6076 44.7774 19.8627 45.4347 19.8627C46.092 19.8627 46.7492 19.6076 47.2495 19.1073C48.2502 18.1067 48.2502 16.4782 47.2495 15.4678Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_236_1888">
+									<rect width="48" height="48" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<div>
+								<div class="features-card-title">Wi Fi control</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_236_1898)">
+									<path d="M38.5153 8.13722C37.292 8.13722 36.2969 9.13463 36.2969 10.3607V37.6538C36.4088 40.6043 40.6309 40.5938 40.7421 37.6538V10.3607C40.7421 9.13472 39.7432 8.13722 38.5153 8.13722Z" fill="white"/>
+									<path d="M24.0003 8.13722C22.7723 8.13722 21.7734 9.13463 21.7734 10.3607V37.6538C21.8857 40.6002 26.116 40.5979 26.2272 37.6538V10.3607C26.2272 9.13472 25.2282 8.13722 24.0003 8.13722Z" fill="white"/>
+									<path d="M31.2573 16.2672C30.0341 16.2672 29.0391 17.2646 29.0391 18.4907V29.5238C29.151 32.4746 33.373 32.4637 33.4842 29.5238V18.4907C33.4842 17.2646 32.4852 16.2672 31.2573 16.2672Z" fill="white"/>
+									<path d="M45.773 20.3323C44.5498 20.3323 43.5547 21.3297 43.5547 22.5558V25.4588C43.6666 28.4095 47.8887 28.3988 47.9998 25.4588V22.5558C47.9998 21.3297 47.0009 20.3323 45.773 20.3323Z" fill="white"/>
+									<path d="M2.22694 20.3323C0.999 20.3323 0 21.3297 0 22.5557V25.4588C0.112312 28.4008 4.33434 28.4073 4.44516 25.4588V22.5557C4.44516 21.3297 3.45009 20.3323 2.22694 20.3323Z" fill="white"/>
+									<path d="M9.48475 12.2022C8.25681 12.2022 7.25781 13.1996 7.25781 14.4257V33.5887C7.37013 36.531 11.5923 36.5372 11.7032 33.5887V14.4257C11.7032 13.1996 10.708 12.2022 9.48475 12.2022Z" fill="white"/>
+									<path d="M16.7425 0.00721884C15.5145 0.00721884 14.5156 1.00463 14.5156 2.23069V45.7837C14.6278 48.7259 18.8499 48.7322 18.9608 45.7837V2.23069C18.9608 1.00463 17.9656 0.00721884 16.7425 0.00721884Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_236_1898">
+									<rect width="48" height="48" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+									
+							</div>
+							<div>
+								<div class="features-card-title">Super Quiet</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7002 26.15C26.8202 26.15 32.6002 31.93 32.6002 39.05C32.6002 31.93 38.3802 26.15 45.5002 26.15C38.3802 26.15 32.6002 20.37 32.6002 13.25C32.6002 20.37 26.8202 26.15 19.7002 26.15Z" fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 36.9C7.246 36.9 11.1 40.754 11.1 45.5C11.1 40.754 14.954 36.9 19.7 36.9C14.954 36.9 11.1 33.046 11.1 28.3C11.1 33.046 7.246 36.9 2.5 36.9Z" fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M6.7998 11.1C11.5458 11.1 15.3998 14.954 15.3998 19.7C15.3998 14.954 19.2538 11.1 23.9998 11.1C19.2538 11.1 15.3998 7.246 15.3998 2.5C15.3998 7.246 11.5458 11.1 6.7998 11.1Z" fill="white"/>
+									</svg>
+									
+							</div>
+							<div>
+								<div class="features-card-title">Self cleaning</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M36.0135 0C36.0135 0 32.0642 3.83153 27.7931 5.37628C-3.83599 16.8166 9.50334 39.1107 9.93852 39.1842C9.93852 39.1842 11.7121 36.0956 14.108 34.3339C29.3112 23.1573 32.4012 10.2925 32.4012 10.2925C32.4012 10.2925 28.9896 25.773 15.4641 35.4053C12.4768 37.5317 10.454 42.7672 9.59779 48C9.59779 48 11.7153 47.1444 12.6259 46.9127C12.981 44.5955 13.7234 42.3768 14.9785 40.3947C33.8821 42.6453 40.0733 27.4131 40.8821 22.1018C42.7911 9.5575 36.0135 0 36.0135 0Z" fill="white"/>
+									</svg>
+									
+							</div>
+							<div>
+								<div class="features-card-title">Eco Mode</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_236_1921)">
+									<path d="M46.9092 0H1.09094C0.488762 0 0 0.488762 0 1.09094V46.9092C0 47.5113 0.488762 48.0001 1.09094 48.0001H46.9092C47.5113 48.0001 48.0001 47.5113 48.0001 46.9092V1.09094C48 0.488762 47.5113 0 46.9092 0ZM15.2727 45.8182H2.18179V32.7273H15.2727V45.8182ZM15.2727 30.5455H2.18179V17.4546H15.2727V30.5455ZM15.2727 15.2727H2.18179V2.18179H15.2727V15.2727ZM30.5455 45.8182H17.4546V32.7273H30.5455V45.8182ZM30.5455 30.5455H17.4546V17.4546H30.5455V30.5455ZM30.5455 15.2727H17.4546V2.18179H30.5455V15.2727ZM45.8182 45.8182H32.7273V32.7273H45.8182V45.8182ZM45.8182 30.5455H32.7273V17.4546H45.8182V30.5455ZM45.8182 15.2727H32.7273V2.18179H45.8182V15.2727Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_236_1921">
+									<rect width="48" height="48" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+									
+							</div>
+							<div>
+								<div class="features-card-title">Golden fin</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+						<div class="features-card">
+							<div class="features-card-icon">
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M46.4422 24.2865C46.4983 24.1493 46.5128 23.9986 46.4839 23.8533C46.4549 23.7079 46.3839 23.5743 46.2795 23.469L44.0295 21.219C43.8881 21.0824 43.6986 21.0068 43.5019 21.0085C43.3053 21.0102 43.1172 21.0891 42.9781 21.2282C42.8391 21.3672 42.7602 21.5553 42.7585 21.752C42.7568 21.9486 42.8324 22.1381 42.969 22.2795L43.9395 23.25H24.75C24.5511 23.25 24.3603 23.329 24.2197 23.4697C24.079 23.6103 24 23.8011 24 24C24 24.1989 24.079 24.3897 24.2197 24.5303C24.3603 24.671 24.5511 24.75 24.75 24.75H43.9395L42.9697 25.7198C42.8981 25.789 42.841 25.8717 42.8017 25.9632C42.7624 26.0547 42.7417 26.1531 42.7408 26.2527C42.7399 26.3523 42.7589 26.4511 42.7966 26.5432C42.8343 26.6354 42.89 26.7191 42.9605 26.7896C43.0309 26.86 43.1146 26.9157 43.2068 26.9534C43.299 26.9911 43.3977 27.0101 43.4973 27.0092C43.5969 27.0083 43.6953 26.9877 43.7868 26.9483C43.8783 26.909 43.9611 26.8519 44.0303 26.7803C44.1053 26.6753 46.5173 24.375 46.4422 24.2865Z" fill="white"/>
+									<path d="M42.69 28.9635C42.7733 28.8848 40.347 26.568 40.2788 26.4698C40.1373 26.3331 39.9479 26.2575 39.7512 26.2592C39.5546 26.261 39.3664 26.3398 39.2274 26.4789C39.0883 26.6179 39.0095 26.8061 39.0078 27.0027C39.006 27.1993 39.0816 27.3888 39.2183 27.5303L40.1873 28.5H28.5C28.3011 28.5 28.1103 28.579 27.9697 28.7197C27.829 28.8603 27.75 29.0511 27.75 29.25C27.75 29.4489 27.829 29.6397 27.9697 29.7803C28.1103 29.921 28.3011 30 28.5 30H30.75V37.7175L17.25 42.4425V5.55675L30.75 10.2818V18H28.5C28.3011 18 28.1103 18.079 27.9697 18.2197C27.829 18.3603 27.75 18.5511 27.75 18.75C27.75 18.9489 27.829 19.1397 27.9697 19.2803C28.1103 19.421 28.3011 19.5 28.5 19.5H40.1895L39.2198 20.4698C39.1481 20.5389 39.091 20.6217 39.0517 20.7132C39.0124 20.8047 38.9917 20.9031 38.9908 21.0027C38.99 21.1023 39.0089 21.201 39.0466 21.2932C39.0844 21.3854 39.14 21.4691 39.2105 21.5395C39.2809 21.61 39.3646 21.6657 39.4568 21.7034C39.549 21.7411 39.6477 21.7601 39.7473 21.7592C39.8469 21.7583 39.9453 21.7376 40.0368 21.6983C40.1283 21.659 40.2111 21.6019 40.2803 21.5303L42.5303 19.2803C42.6695 19.1386 42.7475 18.9479 42.7475 18.7493C42.7475 18.5506 42.6695 18.3599 42.5303 18.2183L40.2803 15.9683C40.1388 15.8316 39.9494 15.756 39.7527 15.7577C39.5561 15.7595 39.3679 15.8383 39.2289 15.9774C39.0898 16.1164 39.011 16.3046 39.0093 16.5012C39.0075 16.6978 39.0831 16.8873 39.2198 17.0288L40.1895 18H32.25V9.75C32.2501 9.59454 32.2018 9.44291 32.1119 9.31607C32.022 9.18923 31.895 9.09346 31.7483 9.042L16.7483 3.792C16.6352 3.75233 16.5142 3.74034 16.3955 3.75704C16.2768 3.77374 16.1639 3.81863 16.0661 3.88797C15.9684 3.9573 15.8886 4.04906 15.8336 4.15555C15.7786 4.26203 15.75 4.38015 15.75 4.5V24.7808C11.7863 24.417 11.7893 30.3345 15.75 29.9693V31.875C15.4516 31.875 15.1655 31.9935 14.9545 32.2045C14.7435 32.4155 14.625 32.7016 14.625 33C14.625 33.2984 14.7435 33.5845 14.9545 33.7955C15.1655 34.0065 15.4516 34.125 15.75 34.125V43.5C15.7514 43.6985 15.8308 43.8885 15.9712 44.0288C16.1116 44.1692 16.3015 44.2486 16.5 44.25C16.5845 44.2498 16.6684 44.2356 16.7483 44.208L31.7483 38.958C31.895 38.9065 32.022 38.8108 32.1119 38.6839C32.2018 38.5571 32.2501 38.4055 32.25 38.25V30H40.1873L39.2183 30.9698C39.0816 31.1112 39.006 31.3007 39.0078 31.4973C39.0095 31.694 39.0883 31.8821 39.2274 32.0211C39.3664 32.1602 39.5546 32.239 39.7512 32.2408C39.9479 32.2425 40.1373 32.1669 40.2788 32.0303L42.5288 29.7803C42.6333 29.6753 42.7044 29.5417 42.7331 29.3963C42.7618 29.2509 42.7468 29.1003 42.69 28.9635ZM15.375 28.5C15.2104 28.5013 15.0475 28.4664 14.8979 28.3979C14.7482 28.3294 14.6154 28.2288 14.5089 28.1034C14.4023 27.9779 14.3246 27.8306 14.2811 27.6719C14.2377 27.5131 14.2297 27.3468 14.2575 27.1845C14.2854 27.0223 14.3485 26.8682 14.4425 26.733C14.5364 26.5979 14.6588 26.485 14.8012 26.4023C14.9435 26.3196 15.1022 26.2691 15.2662 26.2545C15.4301 26.2399 15.5953 26.2614 15.75 26.3175V28.4325C15.6297 28.476 15.5029 28.4988 15.375 28.5Z" fill="white"/>
+									<path d="M6.375 18C7.07119 18 7.73887 17.7234 8.23116 17.2312C8.72344 16.7389 9 16.0712 9 15.375C9 14.6788 8.72344 14.0111 8.23116 13.5188C7.73887 13.0266 7.07119 12.75 6.375 12.75C5.67881 12.75 5.01113 13.0266 4.51884 13.5188C4.02656 14.0111 3.75 14.6788 3.75 15.375C3.75 16.0712 4.02656 16.7389 4.51884 17.2312C5.01113 17.7234 5.67881 18 6.375 18ZM6.375 14.25C6.67337 14.25 6.95952 14.3685 7.1705 14.5795C7.38147 14.7905 7.5 15.0766 7.5 15.375C7.5 15.6734 7.38147 15.9595 7.1705 16.1705C6.95952 16.3815 6.67337 16.5 6.375 16.5C6.07663 16.5 5.79048 16.3815 5.5795 16.1705C5.36853 15.9595 5.25 15.6734 5.25 15.375C5.25 15.0766 5.36853 14.7905 5.5795 14.5795C5.79048 14.3685 6.07663 14.25 6.375 14.25Z" fill="white"/>
+									<path d="M10.5 26.625C10.5 25.7299 10.1444 24.8715 9.51149 24.2385C8.87855 23.6056 8.02011 23.25 7.125 23.25C6.22989 23.25 5.37145 23.6056 4.73851 24.2385C4.10558 24.8715 3.75 25.7299 3.75 26.625C3.75 27.5201 4.10558 28.3786 4.73851 29.0115C5.37145 29.6444 6.22989 30 7.125 30C8.02011 30 8.87855 29.6444 9.51149 29.0115C10.1444 28.3786 10.5 27.5201 10.5 26.625ZM7.125 28.5C6.62772 28.5 6.15081 28.3025 5.79917 27.9508C5.44754 27.5992 5.25 27.1223 5.25 26.625C5.25 26.1277 5.44754 25.6508 5.79917 25.2992C6.15081 24.9475 6.62772 24.75 7.125 24.75C7.62228 24.75 8.09919 24.9475 8.45083 25.2992C8.80246 25.6508 9 26.1277 9 26.625C9 27.1223 8.80246 27.5992 8.45083 27.9508C8.09919 28.3025 7.62228 28.5 7.125 28.5Z" fill="white"/>
+									<path d="M14.25 20.625C14.25 20.1277 14.0525 19.6508 13.7008 19.2992C13.3492 18.9475 12.8723 18.75 12.375 18.75C11.8777 18.75 11.4008 18.9475 11.0492 19.2992C10.6975 19.6508 10.5 20.1277 10.5 20.625C10.5 21.1223 10.6975 21.5992 11.0492 21.9508C11.4008 22.3025 11.8777 22.5 12.375 22.5C12.8723 22.5 13.3492 22.3025 13.7008 21.9508C14.0525 21.5992 14.25 21.1223 14.25 20.625ZM12.375 21C12.2755 21 12.1802 20.9605 12.1098 20.8902C12.0395 20.8198 12 20.7245 12 20.625C12 20.5255 12.0395 20.4302 12.1098 20.3598C12.1802 20.2895 12.2755 20.25 12.375 20.25C12.4745 20.25 12.5698 20.2895 12.6402 20.3598C12.7105 20.4302 12.75 20.5255 12.75 20.625C12.75 20.7245 12.7105 20.8198 12.6402 20.8902C12.5698 20.9605 12.4745 21 12.375 21Z" fill="white"/>
+									<path d="M13.125 16.5C13.4234 16.5 13.7095 16.3815 13.9205 16.1705C14.1315 15.9595 14.25 15.6734 14.25 15.375C14.25 15.0766 14.1315 14.7905 13.9205 14.5795C13.7095 14.3685 13.4234 14.25 13.125 14.25C12.8266 14.25 12.5405 14.3685 12.3295 14.5795C12.1185 14.7905 12 15.0766 12 15.375C12 15.6734 12.1185 15.9595 12.3295 16.1705C12.5405 16.3815 12.8266 16.5 13.125 16.5Z" fill="white"/>
+									<path d="M2.625 20.25C2.32663 20.25 2.04048 20.3685 1.8295 20.5795C1.61853 20.7905 1.5 21.0766 1.5 21.375C1.5 21.6734 1.61853 21.9595 1.8295 22.1705C2.04048 22.3815 2.32663 22.5 2.625 22.5C2.92337 22.5 3.20952 22.3815 3.4205 22.1705C3.63147 21.9595 3.75 21.6734 3.75 21.375C3.75 21.0766 3.63147 20.7905 3.4205 20.5795C3.20952 20.3685 2.92337 20.25 2.625 20.25Z" fill="white"/>
+									<path d="M9.75 31.5C9.15326 31.5 8.58097 31.7371 8.15901 32.159C7.73705 32.581 7.5 33.1533 7.5 33.75C7.5 34.3467 7.73705 34.919 8.15901 35.341C8.58097 35.7629 9.15326 36 9.75 36C10.3467 36 10.919 35.7629 11.341 35.341C11.7629 34.919 12 34.3467 12 33.75C12 33.1533 11.7629 32.581 11.341 32.159C10.919 31.7371 10.3467 31.5 9.75 31.5ZM9.75 34.5C9.55109 34.5 9.36032 34.421 9.21967 34.2803C9.07902 34.1397 9 33.9489 9 33.75C9 33.5511 9.07902 33.3603 9.21967 33.2197C9.36032 33.079 9.55109 33 9.75 33C9.94891 33 10.1397 33.079 10.2803 33.2197C10.421 33.3603 10.5 33.5511 10.5 33.75C10.5 33.9489 10.421 34.1397 10.2803 34.2803C10.1397 34.421 9.94891 34.5 9.75 34.5Z" fill="white"/>
+									</svg>
+									
+							</div>
+							<div>
+								<div class="features-card-title">Ionizer</div>
+								<div class="features-card-description">
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur. Lobortis lacinia lobortis vitae nulla faucibus
+										ultrices.
+								  </p>
+								</div>
+
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="products" class="products">
+			<div class="contaimer">
+				<div class="main__title">
+					<h2 class="secondary__title">Наша продукція</h2>
+				</div>
+				<p class="description">Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. 	Vel sagittis dapibus sodales a nunc<br> habitant cras. At nibh in mi nunc dui volutpat.
+				</p>
+
+					<div class="products__wpapper">
+							<div class="products__wpapper-box">
+								<div class="swiper-box">
+									<div class="swiper-container gallery-top">
+										<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="swiper-slide-container">
+														<img src="./img/Jangfrau/JUNGFRAU1.png" alt="JUNGFRAU1">
+												</div>
+												</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU2.png" alt="JUNGFRAU2">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU3.png" alt="JUNGFRAU3">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU4.png" alt="JUNGFRAU4">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU5.png" alt="JUNGFRAU5">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU6.png" alt="JUNGFRAU6">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU7.png" alt="JUNGFRAU7">
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-slide-container">
+															<img src="./img/Jangfrau/JUNGFRAU8.png" alt="JUNGFRAU8">
+														</div>
+													</div>
+													
+											</div>
+													<!-- Add Arrows -->
+													<div class="swiper-button-next"></div>
+													<div class="swiper-button-prev"></div>
+									</div>
+									<div class="swiper-container gallery-thumbs">
+											<div class="swiper-wrapper">
+													<div class="swiper-slide"><div class="swiper-slide-container"><img src="./img/Jangfrau/JUNGFRAU1.png" alt=""></div></div>
+														<div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
+														<div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
+														<div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
+														<div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
+														</div>
+									</div>
+									</div>
+							<script>
+									var galleryTop = new Swiper('.gallery-top', {
+									spaceBetween: 10,
+									navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+									},
+										loop: true,
+										loopedSlides: 5
+								});
+								var galleryThumbs = new Swiper('.gallery-thumbs', {
+									spaceBetween: 10,
+									centeredSlides: true,
+									slidesPerView: 'auto',
+									touchRatio: 0.2,
+									slideToClickedSlide: true,
+										loop: true,
+										loopedSlides: 4
+								});
+								galleryTop.controller.control = galleryThumbs;
+								galleryThumbs.controller.control = galleryTop;
+							</script>
+								<div class="products__box-item">
+									<div class="products__box-item-title">
+										<h3>КОНДИЦІОНЕР <span class="red">Jangfrau</span></h3>
+										<p class="products__box-options">TCL TAC-07CHSA/XAB1 On-Off WI-FI Ready</p>
+									</div>
+										<div class="products__box-item-description">
+											<p class="">Спліт-система XAB1 - сучасна модель для європейського ринку, яка об’єднує в собі переваги класичних кондиціонерів, з безліччю нововведень в питаннях зниження рівня шуму і підвищення енергоефективності. Всі кондиціонери в рамках лінійки відносяться до класу енергозбереження «А» та оснащено опцією Wi-Fi-керування. Неймовірно стильний дизайн кондиціонера з ребристою панеллю та срібною смужкою.
+											</p>
+										</div>
+										<div class="products__box-item-characteristics">
+											<h3>Характеристики:</h3>
+											 <table class="products__box-item-characteristics-table-td">
+												<tr>
+													<td><span>Комрессор</span></td>
+													<td>On/Off</td>
+												</tr>
+												<tr>
+													<td><span>Холодоагент</span></td>
+													<td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Холодопродуктивність</span></td>
+												  <td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Теплопродуктивність</span></td>
+												  <td>2140 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Площа</span></td>
+												  <td>до 20 м2</td>
+												</tr>
+											 </table>
+											 
+										</div>
+										<div class="products__box-item-features">
+											<h3>Особливості:</h3>
+												<div class="features__grid">
+													<div class="features__grid-item features__grid-item1">
+															<div>Світлодіодний дисплей</div>
+													</div>
+													<div class="features__grid-item features__grid-item2">
+														<div>IoT Wi Fi керування(опція)</div>
+													</div>
+													<div class="features__grid-item features__grid-item3">
+														Унікальний дизайн внутрішнього блоку
+													</div>
+													<div class="features__grid-item features__grid-item4">
+														Подвійний дренаж
+													</div>
+													<div class="features__grid-item features__grid-item5">
+														Безпечна конструкція
+													</div>
+													<div class="features__grid-item features__grid-item6">
+														smart налаштування напрямку повітря
+													</div>
+												</div>
+										</div>
+										<button class="btn__buy">
+											<div><p>Замовити</p></div>
+										</button>
+	
+								</div>
+							</div>
+					</div>
+					<div class="products__wpapper">
+							<div class="products__wpapper-box row-reverse">
+								<div class="products__slider">
+									<img src="./img/products_img2.png" alt="">
+								</div>
+								<div class="products__box-item">
+									<div class="products__box-item-title">
+										<h3>КОНДИЦІОНЕР <span class="red">Montblanc</span></h3>
+										<p class="products__box-options">TCL TAC-07CHSA/XAB1 On-Off WI-FI Ready</p>
+									</div>
+										<div class="products__box-item-description">
+											<p class="">Спліт-система XAB1 - сучасна модель для європейського ринку, яка об’єднує в собі переваги класичних кондиціонерів, з безліччю нововведень в питаннях зниження рівня шуму і підвищення енергоефективності. Всі кондиціонери в рамках лінійки відносяться до класу енергозбереження «А» та оснащено опцією Wi-Fi-керування. Неймовірно стильний дизайн кондиціонера з ребристою панеллю та срібною смужкою.
+											</p>
+										</div>
+										<div class="products__box-item-characteristics">
+											<h3>Характеристики:</h3>
+											 <table class="products__box-item-characteristics-table-td">
+												<tr>
+													<td><span>Комрессор</span></td>
+													<td>On/Off</td>
+												</tr>
+												<tr>
+													<td><span>Холодоагент</span></td>
+													<td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Холодопродуктивність</span></td>
+												  <td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Теплопродуктивність</span></td>
+												  <td>2140 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Площа</span></td>
+												  <td>до 20 м2</td>
+												</tr>
+											 </table>
+											 
+										</div>
+										<div class="products__box-item-features">
+											<h3>Особливості:</h3>
+												<div class="features__grid">
+													<div class="features__grid-item features__grid-item1">
+														Світлодіодний дисплей
+													</div>
+													<div class="features__grid-item features__grid-item2">
+														IoT Wi Fi керування(опція)
+													</div>
+													<div class="features__grid-item features__grid-item3">
+														Унікальний дизайн внутрішнього блоку
+													</div>
+													<div class="features__grid-item features__grid-item4">
+														Подвійний дренаж
+													</div>
+													<div class="features__grid-item features__grid-item5">
+														Безпечна конструкція
+													</div>
+													<div class="features__grid-item features__grid-item6">
+														smart налаштування напрямку повітря
+													</div>
+												</div>
+										</div>
+										<button class="btn__buy">
+											<div><p>Замовити</p></div>
+										</button>
+	
+								</div>
+							</div>
+					</div>
+					<div class="products__wpapper">
+							<div class="products__wpapper-box">
+								<div class="products__slider">
+									<img src="./img/products_img3.png" alt="">
+								</div>
+								<div class="products__box-item">
+									<div class="products__box-item-title">
+										<h3>КОНДИЦІОНЕР <span class="red">Nordend</span></h3>
+										<p class="products__box-options">TCL TAC-07CHSA/XAB1 On-Off WI-FI Ready</p>
+									</div>
+										<div class="products__box-item-description">
+											<p class="">Спліт-система XAB1 - сучасна модель для європейського ринку, яка об’єднує в собі переваги класичних кондиціонерів, з безліччю нововведень в питаннях зниження рівня шуму і підвищення енергоефективності. Всі кондиціонери в рамках лінійки відносяться до класу енергозбереження «А» та оснащено опцією Wi-Fi-керування. Неймовірно стильний дизайн кондиціонера з ребристою панеллю та срібною смужкою.
+											</p>
+										</div>
+										<div class="products__box-item-characteristics">
+											<h3>Характеристики:</h3>
+											 <table class="products__box-item-characteristics-table-td">
+												<tr>
+													<td><span>Комрессор</span></td>
+													<td>On/Off</td>
+												</tr>
+												<tr>
+													<td><span>Холодоагент</span></td>
+													<td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Холодопродуктивність</span></td>
+												  <td>2100 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Теплопродуктивність</span></td>
+												  <td>2140 Вт</td>
+												</tr>
+												<tr>
+												  <td><span>Площа</span></td>
+												  <td>до 20 м2</td>
+												</tr>
+											 </table>
+											 
+										</div>
+										<div class="products__box-item-features">
+											<h3>Особливості:</h3>
+												<div class="features__grid">
+													<div class="features__grid-item features__grid-item1">
+														Світлодіодний дисплей
+													</div>
+													<div class="features__grid-item features__grid-item2">
+														IoT Wi Fi керування(опція)
+													</div>
+													<div class="features__grid-item features__grid-item3">
+														Унікальний дизайн внутрішнього блоку
+													</div>
+													<div class="features__grid-item features__grid-item4">
+														Подвійний дренаж
+													</div>
+													<div class="features__grid-item features__grid-item5">
+														Безпечна конструкція
+													</div>
+													<div class="features__grid-item features__grid-item6">
+														smart налаштування напрямку повітря
+													</div>
+												</div>
+										</div>
+										<button class="btn__buy">
+											<div><p>Замовити</p></div>
+										</button>
+	
+								</div>
+							</div>
+					</div>
+
+			</div>
+		</section>
+		<section class="functional">
+			<div class="container">
+				<div class="main__title">
+					<h2 class="secondary__title">Функціональні можливості</h2>
+				</div>
+				<p class="description">Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. 	Vel sagittis dapibus sodales a nunc<br> habitant cras. At nibh in mi nunc dui volutpat.
+				</p>
+				<div class="functional__grid">
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M45.1608 21.947L45.0884 21.849L45.0741 21.8203L38.5013 12.063L31.9283 21.8204L31.9147 21.8478L31.8416 21.9471C30.7869 23.3754 30.2295 25.0724 30.2295 26.8547C30.2295 31.4158 33.9402 35.1264 38.5012 35.1264C43.0621 35.1264 46.7728 31.4157 46.7728 26.8547C46.773 25.0723 46.2155 23.3752 45.1608 21.947Z" fill="#ED3636"/>
+								<path d="M38.5017 37.9448C32.3866 37.9448 27.4118 32.9698 27.4118 26.8548C27.4118 24.4777 28.1523 22.2126 29.5536 20.3021L33.8744 13.8878L27.2134 4L13.3351 24.6019C11.153 27.5713 10 31.092 10 34.7865C10 44.2781 17.7219 52 27.2135 52C36.2068 52 43.6103 45.0671 44.3627 36.2652C42.6611 37.3289 40.6522 37.9448 38.5017 37.9448Z" fill="#ED3636"/>
+								</svg>
+						</div>
+						<h4>Подвійний дренаж</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M47.65 11.4999C39.4594 11.4999 33.1848 9.15981 27.8786 4C22.5731 9.15981 16.2987 11.4999 8.10879 11.4999C8.10879 24.9358 5.32852 44.1839 27.8786 52C50.4302 44.1838 47.65 24.9358 47.65 11.4999Z" fill="#ED3636"/>
+								</svg>
+						</div>
+						<h4>Безпечна конструкція</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M26.303 4.70294C27.2402 3.76569 28.7598 3.76569 29.697 4.70294L36.897 11.9029C37.8342 12.8402 37.8342 14.3598 36.897 15.2971C35.9598 16.2343 34.4402 16.2343 33.503 15.2971L30.4 12.1941V25.6C30.4 26.9255 29.3255 28 28 28C26.6745 28 25.6 26.9255 25.6 25.6V12.1941L22.4971 15.2971C21.5598 16.2343 20.0402 16.2343 19.103 15.2971C18.1657 14.3598 18.1657 12.8402 19.103 11.9029L26.303 4.70294ZM18.754 37.0298C17.3452 38.2823 15.4133 40 11.8 40C10.022 40 8.60231 39.6122 7.39653 38.9639C6.28694 38.3673 5.44629 37.5882 4.83004 37.0173C4.80959 36.9983 4.78938 36.9796 4.76944 36.9611C3.79684 36.0604 3.73845 34.5419 4.63898 33.5694C5.53953 32.5967 7.05801 32.5384 8.03058 33.4389C8.70522 34.0636 9.14193 34.4524 9.6695 34.7361C10.1377 34.9878 10.77 35.2 11.8 35.2C13.552 35.2 14.3178 34.5508 15.6055 33.4062L15.6461 33.3702C17.0548 32.1177 18.9867 30.4 22.6 30.4C24.3779 30.4 25.7978 30.7878 27.0035 31.4361C28.113 32.0327 28.9538 32.8118 29.5701 33.3827C29.5905 33.4017 29.6106 33.4204 29.6306 33.4389C30.3052 34.0636 30.742 34.4524 31.2695 34.7361C31.7378 34.9878 32.3699 35.2 33.4 35.2C35.152 35.2 35.9178 34.5508 37.2054 33.4062L37.246 33.3702C38.6548 32.1177 40.5868 30.4 44.2 30.4C45.9779 30.4 47.3978 30.7878 48.6035 31.4361C49.713 32.0327 50.5538 32.8118 51.1701 33.3827C51.1905 33.4017 51.2106 33.4204 51.2306 33.4389C52.2033 34.3396 52.2616 35.8581 51.3611 36.8306C50.4604 37.8033 48.9419 37.8616 47.9694 36.9611C47.2948 36.3364 46.858 35.9476 46.3305 35.6639C45.8622 35.4122 45.2301 35.2 44.2 35.2C42.448 35.2 41.6822 35.8492 40.3946 36.9938L40.354 37.0298C38.9452 38.2823 37.0132 40 33.4 40C31.6221 40 30.2022 39.6122 28.9965 38.9639C27.887 38.3673 27.0462 37.5882 26.4302 37.0173C26.4095 36.9983 26.3894 36.9796 26.3694 36.9611C25.6948 36.3364 25.258 35.9476 24.7305 35.6639C24.2622 35.4122 23.6301 35.2 22.6 35.2C20.8481 35.2 20.0822 35.8492 18.7945 36.9938L18.754 37.0298ZM18.754 49.0298C17.3452 50.2823 15.4133 52 11.8 52C10.022 52 8.60231 51.6122 7.39653 50.9639C6.28694 50.3673 5.44631 49.5882 4.83006 49.0173C4.80962 48.9983 4.78941 48.9796 4.76944 48.9611C3.79684 48.0604 3.73845 46.5419 4.63898 45.5694C5.53953 44.5967 7.05801 44.5384 8.03058 45.4389C8.70522 46.0636 9.14193 46.4524 9.6695 46.7361C10.1377 46.9878 10.77 47.2 11.8 47.2C13.552 47.2 14.3178 46.5508 15.6055 45.4062L15.6461 45.3702C17.0548 44.1177 18.9867 42.4 22.6 42.4C24.3779 42.4 25.7978 42.7878 27.0035 43.4361C28.113 44.0327 28.9538 44.8118 29.5701 45.3827C29.5905 45.4017 29.6106 45.4204 29.6306 45.4389C30.3052 46.0636 30.742 46.4524 31.2695 46.7361C31.7378 46.9878 32.3699 47.2 33.4 47.2C35.152 47.2 35.9178 46.5508 37.2054 45.4062L37.246 45.3702C38.6548 44.1177 40.5868 42.4 44.2 42.4C45.9779 42.4 47.3978 42.7878 48.6035 43.4361C49.713 44.0327 50.5538 44.8118 51.1698 45.3827C51.1905 45.4017 51.2106 45.4204 51.2306 45.4389C52.2033 46.3396 52.2616 47.8581 51.3611 48.8306C50.4604 49.8033 48.9419 49.8616 47.9694 48.9611C47.2948 48.3364 46.858 47.9476 46.3305 47.6639C45.8622 47.4122 45.2301 47.2 44.2 47.2C42.448 47.2 41.6822 47.8492 40.3946 48.9938L40.354 49.0298C38.9452 50.2823 37.0132 52 33.4 52C31.6221 52 30.2022 51.6122 28.9965 50.9639C27.887 50.3673 27.0462 49.5882 26.4302 49.0173C26.4095 48.9983 26.3894 48.9796 26.3694 48.9611C25.6948 48.3364 25.258 47.9476 24.7305 47.6639C24.2622 47.4122 23.6301 47.2 22.6 47.2C20.8481 47.2 20.0822 47.8492 18.7945 48.9938L18.754 49.0298Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Незалежне осушення</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M22.9834 30.508C31.2901 30.508 38.0334 37.2513 38.0334 45.558C38.0334 37.2513 44.7767 30.508 53.0834 30.508C44.7767 30.508 38.0334 23.7647 38.0334 15.458C38.0334 23.7647 31.2901 30.508 22.9834 30.508Z" fill="#ED3636"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M2.91699 43.0499C8.45399 43.0499 12.9503 47.5463 12.9503 53.0833C12.9503 47.5463 17.4467 43.0499 22.9837 43.0499C17.4467 43.0499 12.9503 38.5536 12.9503 33.0166C12.9503 38.5536 8.45399 43.0499 2.91699 43.0499Z" fill="#ED3636"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.93359 12.9498C13.4706 12.9498 17.9669 17.4462 17.9669 22.9832C17.9669 17.4462 22.4633 12.9498 28.0003 12.9498C22.4633 12.9498 17.9669 8.4535 17.9669 2.9165C17.9669 8.4535 13.4706 12.9498 7.93359 12.9498Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Антикорозійне покриття</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M42.3159 21.0931L37.9628 22.2598L31.7328 18.6664L37.9628 15.0694L42.3159 16.236C42.4739 16.2781 42.6367 16.2994 42.8003 16.2995C43.2531 16.2993 43.6904 16.1344 44.0307 15.8357C44.371 15.537 44.5911 15.1247 44.6501 14.6757C44.709 14.2267 44.6027 13.7717 44.351 13.3952C44.0993 13.0188 43.7193 12.7467 43.2819 12.6296L42.5352 12.4299L42.6743 12.3496C43.0995 12.1003 43.4089 11.693 43.5349 11.2164C43.6609 10.7399 43.5933 10.2328 43.3468 9.80594C43.1003 9.37906 42.695 9.06699 42.2193 8.93784C41.7436 8.80869 41.2361 8.87294 40.8076 9.11657L40.6685 9.19684L40.8683 8.45017C40.9371 8.21174 40.9578 7.96197 40.9289 7.71547C40.9001 7.46897 40.8224 7.23069 40.7004 7.01458C40.5784 6.79846 40.4145 6.60884 40.2184 6.45681C40.0222 6.30478 39.7977 6.1934 39.558 6.12917C39.3183 6.06494 39.0681 6.04916 38.8223 6.08275C38.5764 6.11634 38.3396 6.19863 38.1259 6.3248C37.9122 6.45097 37.7258 6.61849 37.5776 6.81756C37.4294 7.01663 37.3224 7.24325 37.2628 7.48417L36.0961 11.8363L29.8661 15.4334V8.23924L33.0525 5.05284C33.3926 4.70078 33.5807 4.22926 33.5765 3.73982C33.5722 3.25039 33.3759 2.78221 33.0298 2.43611C32.6837 2.09002 32.2155 1.8937 31.7261 1.88945C31.2367 1.88519 30.7651 2.07334 30.4131 2.41337L29.8661 2.96031V2.79977C29.8661 2.3047 29.6695 1.82991 29.3194 1.47984C28.9693 1.12977 28.4945 0.933105 27.9995 0.933105C27.5044 0.933105 27.0296 1.12977 26.6795 1.47984C26.3295 1.82991 26.1328 2.3047 26.1328 2.79977V2.96031L25.5859 2.41337C25.2338 2.07334 24.7623 1.88519 24.2729 1.88945C23.7834 1.8937 23.3152 2.09002 22.9691 2.43611C22.623 2.78221 22.4267 3.25039 22.4225 3.73982C22.4182 4.22926 22.6064 4.70078 22.9464 5.05284L26.1328 8.23924V15.4334L19.9028 11.8363L18.7361 7.48417C18.6766 7.24325 18.5695 7.01663 18.4213 6.81756C18.2731 6.61849 18.0867 6.45097 17.873 6.3248C17.6593 6.19863 17.4226 6.11634 17.1767 6.08275C16.9308 6.04916 16.6807 6.06494 16.441 6.12917C16.2012 6.1934 15.9767 6.30478 15.7806 6.45681C15.5844 6.60884 15.4205 6.79846 15.2985 7.01458C15.1765 7.23069 15.0988 7.46897 15.07 7.71547C15.0412 7.96197 15.0618 8.21174 15.1307 8.45017L15.3304 9.19684L15.1913 9.11657C14.7628 8.87294 14.2553 8.80869 13.7796 8.93784C13.3039 9.06699 12.8986 9.37906 12.6522 9.80594C12.4057 10.2328 12.3381 10.7399 12.4641 11.2164C12.5901 11.693 12.8994 12.1003 13.3247 12.3496L13.4637 12.4299L12.7171 12.6296C12.2796 12.7467 11.8997 13.0188 11.648 13.3952C11.3963 13.7717 11.29 14.2267 11.3489 14.6757C11.4078 15.1247 11.6279 15.537 11.9682 15.8357C12.3085 16.1344 12.7458 16.2993 13.1987 16.2995C13.3622 16.2994 13.525 16.2781 13.6831 16.236L18.0361 15.0694L24.2661 18.6664L18.0361 22.2635L13.6831 21.0931C13.2048 20.965 12.6953 21.0321 12.2665 21.2797C11.8378 21.5273 11.525 21.9351 11.3969 22.4133C11.2688 22.8915 11.3359 23.4011 11.5835 23.8298C11.8311 24.2586 12.2388 24.5714 12.7171 24.6995L13.4637 24.8992L13.3247 24.9795C13.1107 25.1012 12.9228 25.264 12.772 25.4585C12.6212 25.6531 12.5103 25.8756 12.4458 26.1131C12.3813 26.3507 12.3645 26.5987 12.3962 26.8428C12.4279 27.087 12.5076 27.3224 12.6307 27.5356C12.7538 27.7488 12.9178 27.9355 13.1134 28.0851C13.309 28.2346 13.5322 28.344 13.7702 28.4069C14.0082 28.4698 14.2562 28.485 14.5002 28.4517C14.7441 28.4183 14.979 28.3371 15.1913 28.2126L15.3304 28.1323L15.1307 28.879C15.0618 29.1174 15.0412 29.3672 15.07 29.6137C15.0988 29.8602 15.1765 30.0985 15.2985 30.3146C15.4205 30.5307 15.5844 30.7203 15.7806 30.8723C15.9767 31.0244 16.2012 31.1358 16.441 31.2C16.6807 31.2642 16.9308 31.28 17.1767 31.2464C17.4226 31.2128 17.6593 31.1305 17.873 31.0044C18.0867 30.8782 18.2731 30.7107 18.4213 30.5116C18.5695 30.3125 18.6766 30.0859 18.7361 29.845L19.9028 25.4928L26.1328 21.8995V29.0936L22.9464 32.28C22.6064 32.6321 22.4182 33.1036 22.4225 33.5931C22.4267 34.0825 22.623 34.5507 22.9691 34.8968C23.3152 35.2429 23.7834 35.4392 24.2729 35.4434C24.7623 35.4477 25.2338 35.2595 25.5859 34.9195L26.1328 34.3726V34.5331C26.1328 35.0282 26.3295 35.503 26.6795 35.853C27.0296 36.2031 27.5044 36.3998 27.9995 36.3998C28.4945 36.3998 28.9693 36.2031 29.3194 35.853C29.6695 35.503 29.8661 35.0282 29.8661 34.5331V34.3726L30.4131 34.9195C30.7651 35.2595 31.2367 35.4477 31.7261 35.4434C32.2155 35.4392 32.6837 35.2429 33.0298 34.8968C33.3759 34.5507 33.5722 34.0825 33.5765 33.5931C33.5807 33.1036 33.3926 32.6321 33.0525 32.28L29.8661 29.0936V21.8995L36.0961 25.4966L37.2628 29.8487C37.369 30.2455 37.603 30.5961 37.9287 30.8463C38.2543 31.0966 38.6534 31.2324 39.0641 31.2328C39.2277 31.2328 39.3905 31.2114 39.5485 31.1694C39.7854 31.1059 40.0073 30.9964 40.2018 30.8472C40.3963 30.6979 40.5595 30.5118 40.6821 30.2994C40.8046 30.0871 40.8841 29.8527 40.9161 29.6096C40.948 29.3665 40.9318 29.1195 40.8683 28.8827L40.6685 28.136L40.8076 28.2163C41.2361 28.4599 41.7436 28.5242 42.2193 28.395C42.695 28.2659 43.1003 27.9538 43.3468 27.5269C43.5933 27.1001 43.6609 26.593 43.5349 26.1165C43.4089 25.6399 43.0995 25.2325 42.6743 24.9832L42.5352 24.903L43.2819 24.7032C43.7606 24.5751 44.1688 24.2621 44.4168 23.833C44.6647 23.4039 44.732 22.8939 44.6039 22.4152C44.4758 21.9364 44.1628 21.5282 43.7337 21.2803C43.3046 21.0323 42.7946 20.965 42.3159 21.0931Z" fill="#ED3636"></path>
+								<path d="M32.6663 50.3426C32.6663 51.5803 32.1747 52.7673 31.2995 53.6424C30.4243 54.5176 29.2374 55.0093 27.9997 55.0093C26.762 55.0093 25.575 54.5176 24.6998 53.6424C23.8247 52.7673 23.333 51.5803 23.333 50.3426C23.333 47.4913 25.8838 45.2858 27.5209 41.3873C27.5597 41.2921 27.6259 41.2107 27.7112 41.1534C27.7965 41.096 27.8969 41.0654 27.9997 41.0654C28.1024 41.0654 28.2029 41.096 28.2881 41.1534C28.3734 41.2107 28.4397 41.2921 28.4785 41.3873C30.1155 45.2858 32.6663 47.4913 32.6663 50.3426Z" fill="#ED3636"></path>
+								<path d="M19.5999 45.6761C19.5999 46.9138 19.1083 48.1008 18.2331 48.9759C17.3579 49.8511 16.1709 50.3428 14.9333 50.3428C13.6956 50.3428 12.5086 49.8511 11.6334 48.9759C10.7583 48.1008 10.2666 46.9138 10.2666 45.6761C10.2666 42.8248 12.8174 40.6193 14.4545 36.7208C14.4933 36.6256 14.5595 36.5442 14.6448 36.4869C14.7301 36.4295 14.8305 36.3989 14.9333 36.3989C15.036 36.3989 15.1364 36.4295 15.2217 36.4869C15.307 36.5442 15.3733 36.6256 15.4121 36.7208C17.0491 40.6193 19.5999 42.8248 19.5999 45.6761Z" fill="#ED3636"></path>
+								<path d="M45.7337 45.6761C45.7337 46.9138 45.2421 48.1008 44.3669 48.9759C43.4917 49.8511 42.3047 50.3428 41.0671 50.3428C39.8294 50.3428 38.6424 49.8511 37.7672 48.9759C36.8921 48.1008 36.4004 46.9138 36.4004 45.6761C36.4004 42.8248 38.9512 40.6193 40.5883 36.7208C40.6271 36.6256 40.6933 36.5442 40.7786 36.4869C40.8639 36.4295 40.9643 36.3989 41.0671 36.3989C41.1698 36.3989 41.2702 36.4295 41.3555 36.4869C41.4408 36.5442 41.5071 36.6256 41.5459 36.7208C43.1829 40.6193 45.7337 42.8248 45.7337 45.6761Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Режим розумного відтаювання</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M7.11608 30.3211H41.4065C46.3781 30.3211 50.4224 26.2765 50.4224 21.3053C50.4224 16.3412 46.3897 12.3013 41.4281 12.2896C40.9393 12.2822 37.7656 12.3261 35.3957 14.6368C33.8079 16.1848 33.0031 18.3118 33.0031 20.9586C33.0031 22.1273 33.9504 23.0747 35.1192 23.0747C36.2879 23.0747 37.2351 22.1272 37.2351 20.9586C37.2351 19.509 37.6035 18.4083 38.3296 17.6873C39.4613 16.5634 41.2217 16.5229 41.3625 16.5215C41.3823 16.5221 41.3798 16.5218 41.4064 16.5218C44.0442 16.5218 46.1902 18.6677 46.1902 21.3053C46.1902 23.943 44.0443 26.0889 41.4064 26.0889H7.11608C5.94737 26.0889 5 27.0363 5 28.2049C5 29.3736 5.94737 30.3211 7.11608 30.3211Z" fill="#ED3636"></path>
+								<path d="M7.11608 22.032H23.4606C28.4319 22.032 32.4763 17.9874 32.4763 13.0161C32.4763 8.05182 28.4438 4.01174 23.482 4.00044C22.9875 3.99354 19.8188 4.03762 17.4495 6.34766C15.8619 7.89582 15.0569 10.0229 15.0569 12.6696C15.0569 13.8383 16.0042 14.7859 17.1729 14.7859C18.3417 14.7859 19.2889 13.8384 19.2889 12.6696C19.2889 11.2201 19.6573 10.1193 20.3834 9.39833C21.5149 8.27456 23.2754 8.23378 23.4166 8.23237C23.4364 8.233 23.4337 8.23268 23.4606 8.23268C26.0981 8.23268 28.2442 10.3786 28.2442 13.0161C28.2442 15.6539 26.0983 17.7997 23.4606 17.7997H7.11608C5.94737 17.7997 5 18.7472 5 19.916C5 21.0848 5.94737 22.032 7.11608 22.032Z" fill="#ED3636"></path>
+								<path d="M41.4065 33.9683H7.11608C5.94737 33.9683 5 34.9157 5 36.0843C5 37.2529 5.94729 38.2004 7.11608 38.2004H41.4065C44.0443 38.2004 46.1903 40.3463 46.1903 42.9839C46.1903 45.6216 44.0444 47.7675 41.4065 47.7675C41.3799 47.7675 41.3824 47.767 41.3626 47.7678C41.2217 47.7664 39.4612 47.7258 38.3297 46.602C37.6035 45.881 37.2351 44.7803 37.2351 43.3305C37.2351 42.1618 36.2879 41.2143 35.1192 41.2143C33.9505 41.2143 33.0031 42.1618 33.0031 43.3305C33.0031 45.9774 33.808 48.1045 35.3958 49.6525C37.6702 51.8703 40.6826 52.0003 41.3561 52.0002C41.3844 52.0002 41.4084 52 41.4282 51.9997C46.3897 51.988 50.4225 47.948 50.4225 42.984C50.4225 38.0127 46.3781 33.9683 41.4065 33.9683Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Турбо режим</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M8.98933 26.3696C8.04459 26.3722 7.1199 26.6423 6.32225 27.1485C5.5246 27.6548 4.88657 28.3765 4.482 29.2303C4.07742 30.084 3.92282 31.0348 4.03609 31.9728C4.14936 32.9107 4.52586 33.7974 5.12204 34.5303L17.8312 50.099C18.2844 50.6616 18.8652 51.1081 19.5255 51.4012C20.1859 51.6943 20.9066 51.8256 21.6279 51.7842C23.1705 51.7014 24.5632 50.8762 25.4511 49.5194L51.8513 7.00189C51.8557 6.99483 51.8602 6.98778 51.8648 6.98083C52.1125 6.60049 52.0322 5.84676 51.5209 5.37326C51.3804 5.24323 51.2149 5.14333 51.0343 5.07972C50.8538 5.0161 50.6622 4.99012 50.4712 5.00336C50.2803 5.01661 50.0941 5.0688 49.9241 5.15673C49.754 5.24466 49.6038 5.36646 49.4827 5.51464C49.4732 5.52629 49.4634 5.53776 49.4534 5.54906L22.8285 35.6313C22.7272 35.7457 22.6041 35.8389 22.4665 35.9055C22.3288 35.972 22.1794 36.0105 22.0267 36.0187C21.8741 36.027 21.7213 36.0048 21.5773 35.9536C21.4333 35.9023 21.3009 35.8229 21.1878 35.72L12.3515 27.6789C11.4338 26.8376 10.2343 26.3705 8.98933 26.3696Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Функція самодіагностики</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M50.9999 42.6089H45.4423C44.5387 39.6017 41.7755 37.3916 38.4782 37.3916C35.1809 37.3916 32.4198 39.6017 31.5141 42.6089H5.08692C3.93492 42.6089 3 43.544 3 44.696C3 45.848 3.93492 46.7829 5.08692 46.7829H31.514C32.4176 49.7901 35.1808 52.0002 38.4781 52.0002C41.7754 52.0002 44.5366 49.7901 45.4422 46.7829H50.9998C52.1539 46.7829 53.0867 45.848 53.0867 44.696C53.0867 43.544 52.154 42.6089 50.9999 42.6089ZM38.4782 47.8264C36.7523 47.8264 35.3478 46.4219 35.3478 44.696C35.3478 42.97 36.7523 41.5655 38.4782 41.5655C40.2042 41.5655 41.6086 42.97 41.6086 44.696C41.6086 46.4219 40.2041 47.8264 38.4782 47.8264Z" fill="#ED3636"></path>
+								<path d="M50.9999 9.21735H45.4423C44.5366 6.21008 41.7755 4 38.4782 4C35.1809 4 32.4198 6.21008 31.514 9.21735H5.08692C3.93492 9.21735 3 10.1523 3 11.3043C3 12.4563 3.93492 13.3912 5.08692 13.3912H31.514C32.4198 16.3985 35.1808 18.6086 38.4782 18.6086C41.7756 18.6086 44.5367 16.3985 45.4423 13.3913H50.9999C52.154 13.3913 53.0868 12.4564 53.0868 11.3044C53.0868 10.1524 52.154 9.21735 50.9999 9.21735ZM38.4782 14.4347C36.7523 14.4347 35.3478 13.0302 35.3478 11.3043C35.3478 9.57832 36.7523 8.17384 38.4782 8.17384C40.2042 8.17384 41.6086 9.57832 41.6086 11.3043C41.6086 13.0302 40.2041 14.4347 38.4782 14.4347Z" fill="#ED3636"></path>
+								<path d="M50.9999 25.9131H24.5729C23.6671 22.9059 20.906 20.6958 17.6087 20.6958C14.3114 20.6958 11.5503 22.9059 10.6446 25.9131H5.08692C3.93492 25.9131 3 26.8481 3 28.0001C3 29.1521 3.93492 30.087 5.08692 30.087H10.6445C11.5503 33.0942 14.3113 35.3043 17.6086 35.3043C20.9059 35.3043 23.6671 33.0942 24.5728 30.087H50.9998C52.1539 30.087 53.0867 29.1521 53.0867 28.0001C53.0868 26.8481 52.154 25.9131 50.9999 25.9131ZM17.6086 31.1305C15.8827 31.1305 14.4782 29.726 14.4782 28.0001C14.4782 26.2741 15.8827 24.8696 17.6086 24.8696C19.3346 24.8696 20.7391 26.2741 20.7391 28.0001C20.7391 29.726 19.3346 31.1305 17.6086 31.1305Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Запам’ятовування положення жалюзі</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M27.0774 24.6177C27.0774 24.1078 27.4907 23.6946 28.0005 23.6946C28.5103 23.6946 28.9236 24.1078 28.9236 24.6177V37.1144L30.6202 35.3706C37.6226 28.1739 37.5429 16.5424 30.4427 9.44214L28.0005 7L25.5584 9.44214C18.4581 16.5424 18.3785 28.1739 25.3808 35.3706L27.0774 37.1144V24.6177Z" fill="#ED3636"></path>
+								<path d="M15.3473 41.0942C14.9868 40.7337 14.9868 40.1493 15.3473 39.7888C15.7078 39.4283 16.2922 39.4283 16.6527 39.7888L25.2308 48.3669V46.4415C25.2308 36.2618 16.949 27.98 6.76923 27.98H4V31.2107C4 41.3905 12.2818 49.6723 22.4615 49.6723H23.9253L15.3473 41.0942Z" fill="#ED3636"></path>
+								<path d="M30.7695 46.4415V48.3669L39.3476 39.7887C39.7081 39.4283 40.2925 39.4283 40.653 39.7887C41.0135 40.1493 41.0135 40.7337 40.653 41.0942L32.075 49.6723H33.5388C43.7185 49.6723 52.0003 41.3905 52.0003 31.2107V27.98H49.2311C39.0513 27.98 30.7695 36.2618 30.7695 46.4415Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Економічний режим</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M51.1035 37.5909C47.3846 46.0736 38.9152 52 29.0596 52C15.7716 52 4.99998 41.2284 4.99998 27.9404C4.99998 15.4618 14.4995 5.20297 26.662 4C20.9849 7.71342 17.2342 14.1256 17.2342 21.4159C17.2342 32.9023 26.545 42.2133 38.0314 42.2133C42.9845 42.2133 47.5319 40.4811 51.1035 37.5909Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Режим сну</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M28 36.835C26.6581 36.835 25.5332 37.9598 25.5332 39.3017C25.5332 40.6437 26.6581 41.7685 28 41.7685C29.2926 41.7685 30.4668 40.6437 30.4076 39.3609C30.4668 37.9499 29.3518 36.835 28 36.835Z" fill="#ED3636"></path>
+								<path d="M50.832 45.5771C52.3811 42.9031 52.391 39.716 50.8517 37.0519L35.3997 10.2922C33.8703 7.59848 31.1075 6 28.0093 6C24.911 6 22.1482 7.60834 20.6188 10.2823L5.1471 37.0716C3.60783 39.7654 3.6177 42.9722 5.1767 45.6462C6.71598 48.2906 9.46891 49.8792 12.5475 49.8792H43.4119C46.5003 49.8792 49.2729 48.2708 50.832 45.5771ZM47.4771 43.6431C46.6187 45.1232 45.0991 46.0014 43.402 46.0014H12.5376C10.8602 46.0014 9.3505 45.1429 8.5118 43.6925C7.66322 42.2223 7.65335 40.4659 8.50193 38.9858L23.9736 12.2064C24.8123 10.7362 26.3121 9.86792 28.0093 9.86792C29.6965 9.86792 31.2062 10.7461 32.0449 12.2163L47.5067 38.9957C48.3356 40.4363 48.3257 42.1729 47.4771 43.6431Z" fill="#ED3636"></path>
+								<path d="M27.3878 19.5184C26.2136 19.8539 25.4834 20.9195 25.4834 22.2121C25.5426 22.9916 25.5919 23.781 25.6511 24.5605C25.8189 27.5305 25.9866 30.4413 26.1544 33.4113C26.2136 34.4178 26.9931 35.1479 27.9995 35.1479C29.006 35.1479 29.7953 34.3684 29.8447 33.3521C29.8447 32.7403 29.8447 32.1779 29.9039 31.5563C30.0124 29.6519 30.1308 27.7476 30.2394 25.8432C30.2986 24.6098 30.4071 23.3764 30.4663 22.143C30.4663 21.699 30.4071 21.3043 30.2394 20.9096C29.7361 19.8045 28.5619 19.2421 27.3878 19.5184Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Аварійна кнопка</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="functional__grid-item">
+						<div class="functional__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+								<path d="M49.4463 14.5919L44.4081 9.55375C43.6758 8.82147 42.4887 8.82147 41.7565 9.55375C41.0243 10.286 41.0242 11.4732 41.7565 12.2054L42.9498 13.3986L40.5027 15.8457C37.3173 13.1882 33.4441 11.584 29.3125 11.2106V7.75H31C32.0356 7.75 32.875 6.91056 32.875 5.875C32.875 4.83944 32.0356 4 31 4H23.875C22.8394 4 22 4.83944 22 5.875C22 6.91056 22.8394 7.75 23.875 7.75H25.5625V11.2106C15.2759 12.1402 7 20.7782 7 31.5625C7 42.8577 16.1407 52 27.4375 52C38.7327 52 47.875 42.8593 47.875 31.5625C47.875 26.7333 46.2104 22.1607 43.1543 18.4973L45.6014 16.0502L46.7946 17.2435C47.5268 17.9757 48.714 17.9758 49.4463 17.2435C50.1784 16.5113 50.1784 15.3242 49.4463 14.5919ZM27.4375 48.25C18.236 48.25 10.75 40.764 10.75 31.5625C10.75 22.361 18.236 14.875 27.4375 14.875C36.639 14.875 44.125 22.361 44.125 31.5625C44.125 40.764 36.6391 48.25 27.4375 48.25ZM37.1803 31.5625C37.1803 32.5981 36.3408 33.4375 35.3053 33.4375H27.4376C26.402 33.4375 25.5626 32.5981 25.5626 31.5625V20.5305C25.5626 19.4949 26.402 18.6555 27.4376 18.6555C28.4732 18.6555 29.3126 19.4949 29.3126 20.5305V29.6875H35.3053C36.3408 29.6875 37.1803 30.5269 37.1803 31.5625Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Таймер 24 години</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+	
+			<section class="path none">
+					<div class="container">
+						<div class="path__title">
+							<h2 class="secondary__title">Шлях до нового кондиціонеру</h2>
+						</div>
+						<p class="path__description">Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. 	Vel sagittis dapibus sodales a nunc<br> habitant cras. At nibh in mi nunc dui volutpat.
+						</p>
+						<div class="path__row">
+							<div class="path__row-item path__row-item1">
+								<h4>Залиште заявку</h4>
+								<p>Cкористайтесь формою зворотнього зв’язку або просто зателефонуйте нам.</p>
+							</div>
+							<div class="path__row-item path__row-item2">
+								<h4>Очікуйте дзвінок</h4>
+								<p>Представник нашої компанії зв’яжеться з вами для уточнення деталей.</p>
+							</div>
+							<div class="path__row-item path__row-item3">
+								<h4>Встановлення</h4>
+								<p>У попередньо обумовлений час майстри виконають монтаж кондиціонера.</p>
+							</div>
+							<div class="path__row-item path__row-item4">
+								<h4>Готово!</h4>
+								<p>Насолоджуйтесь комфортом від використання якісних кондиціонерів AlpineAir</p>
+							</div>
+						</div>
+					</div>
+			
+		</section>
+
+
+		<section class="advantages">
+			<div class="container">
+				<div class="main__title">
+					<h2 class="secondary__title">Переваги <span class="red">ALPINAIR</span></h2>
+				</div>
+				<p class="description">Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. 	Vel sagittis dapibus sodales a nunc<br> habitant cras. At nibh in mi nunc dui volutpat.
+				</p>
+				<div class="advantages__grid">
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6663 47.3332V37.3332C12.6663 34.7572 14.757 32.6665 17.333 32.6665H46.6663C49.2423 32.6665 51.333 34.7572 51.333 37.3332V47.3332H54.6663C56.2583 47.3332 57.7837 46.7012 58.909 45.5758C60.0343 44.4505 60.6663 42.9252 60.6663 41.3332C60.6663 36.2985 60.6663 27.7012 60.6663 22.6665C60.6663 21.0745 60.0343 19.5492 58.909 18.4238C57.7837 17.2985 56.2583 16.6665 54.6663 16.6665H9.33301C7.74101 16.6665 6.21567 17.2985 5.09034 18.4238C3.96501 19.5492 3.33301 21.0745 3.33301 22.6665V41.3332C3.33301 42.9252 3.96501 44.4505 5.09034 45.5758C6.21567 46.7012 7.74101 47.3332 9.33301 47.3332H12.6663ZM16.6663 47.3332H47.333V37.3332C47.333 36.9652 47.0343 36.6665 46.6663 36.6665H17.333C16.965 36.6665 16.6663 36.9652 16.6663 37.3332V47.3332ZM49.333 21.9998H43.9997C42.8957 21.9998 41.9997 22.8958 41.9997 23.9998C41.9997 25.1038 42.8957 25.9998 43.9997 25.9998H49.333C50.437 25.9998 51.333 25.1038 51.333 23.9998C51.333 22.8958 50.437 21.9998 49.333 21.9998Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Повний комплекс послуг</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<path d="M55.9282 42H8.07215C7.33415 31.766 12.3162 22.176 20.3362 17.322L22.0261 32.444C22.1481 33.542 23.1382 34.342 24.2341 34.21C25.3342 34.086 26.1242 33.098 26.0002 32L24.0121 14.216C23.9542 13.656 24.1362 13.094 24.5102 12.68C24.9022 12.248 25.4622 12 26.0542 12H37.9461C38.5361 12 39.0982 12.248 39.4881 12.68C39.8641 13.096 40.0462 13.648 39.9902 14.182L38.0002 32C37.8762 33.098 38.6661 34.086 39.7661 34.208C40.8541 34.336 41.8521 33.546 41.9741 32.442L43.6642 17.32C51.6842 22.176 56.6661 31.766 55.9282 42Z" fill="#ED3636"></path>
+								<path d="M60 49C60 50.654 58.654 52 57 52H7C5.346 52 4 50.654 4 49C4 47.346 5.346 46 7 46H57C58.654 46 60 47.346 60 49Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Найкращі спеціалісти</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<g clip-path="url(#clip0_70_652)">
+									 <path d="M42.2377 44.8527L45.1644 40.1037L50.4459 38.3025L51.031 32.7554L55.0046 28.8435L53.1154 23.5928L55.0046 18.3419L51.0311 14.43L50.446 8.883L45.1645 7.08175L42.2379 2.33262L36.7022 3.001L31.9999 0L27.2975 3.00125L21.762 2.33288L18.8354 7.08187L13.5539 8.88313L12.9687 14.4301L8.99512 18.342L10.8844 23.5929L8.99512 28.8438L12.9686 32.7555L13.5537 38.3026L18.8352 40.1039L21.7619 44.8529L27.2975 44.1846L31.9999 47.1857L36.7022 44.1846L42.2377 44.8527ZM15.8212 23.5929C15.8212 14.672 23.079 7.41425 31.9999 7.41425C40.9207 7.41425 48.1785 14.672 48.1785 23.5929C48.1785 32.5137 40.9207 39.7715 31.9999 39.7715C23.079 39.7715 15.8212 32.5137 15.8212 23.5929Z" fill="#ED3636"></path>
+									 <path d="M32.0005 11.1665C25.1486 11.1665 19.5742 16.7409 19.5742 23.5928C19.5742 30.4446 25.1486 36.019 32.0005 36.019C38.8523 36.019 44.4267 30.4446 44.4267 23.5928C44.4267 16.7409 38.8523 11.1665 32.0005 11.1665Z" fill="#ED3636"></path>
+									 <path d="M26.412 48.071L19.827 48.866L16.3479 43.2201L15.1651 42.8169L10.0635 58.7626L19.2479 58.2575L26.4335 64L30.662 50.7835L26.412 48.071Z" fill="#ED3636"></path>
+									 <path d="M47.652 43.2203L44.1728 48.866L37.5879 48.071L33.3379 50.7835L37.5664 64L44.752 58.2575L53.9364 58.7626L48.8348 42.8169L47.652 43.2203Z" fill="#ED3636"></path>
+								</g>
+								<defs>
+									 <clipPath id="clip0_70_652">
+										  <rect width="64" height="64" fill="white"></rect>
+									 </clipPath>
+								</defs>
+						  </svg>
+						</div>
+						<h4>Гарантія якості</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M32.7283 8.62661C28.18 8.47515 23.5848 9.71603 19.6175 12.3642C15.1617 15.3416 12.0478 19.7384 10.6134 24.6536C10.2174 24.6053 9.74304 24.6266 9.17984 24.7859C7.07709 25.3825 5.49558 27.1055 4.78447 28.6231C3.86216 30.6007 3.47318 33.2161 3.88349 35.9162C4.29096 38.6078 5.42802 40.8264 6.85024 42.2039C8.27673 43.582 9.8874 44.03 11.4874 43.6936C13.8696 43.1852 15.0508 42.8047 14.7173 40.5854L13.1023 29.827C13.428 24.0044 16.4424 18.5231 21.4842 15.1525C28.2326 10.6447 37.0803 10.9335 43.5173 15.875C47.9951 19.3082 50.595 24.4524 50.895 29.8526L49.7658 37.3783C47.247 44.2711 41.0028 49.0455 33.7772 49.7231H28.9658C27.7242 49.7231 26.7244 50.723 26.7244 51.9632V53.145C26.7244 54.3859 27.7242 55.3857 28.9658 55.3857H35.0323C36.2732 55.3857 37.2687 54.3859 37.2687 53.145V52.5271C42.7173 51.1973 47.4732 47.8487 50.5701 43.1788L52.5135 43.6943C54.095 44.1047 55.7249 43.582 57.1507 42.2046C58.5729 40.8264 59.7093 38.6085 60.1174 35.9169C60.5292 33.2168 60.1288 30.6056 59.2172 28.6238C58.302 26.6419 56.9388 25.3832 55.3651 24.9317C54.7059 24.7418 53.9905 24.6721 53.3768 24.6536C52.0798 20.2092 49.4095 16.1672 45.561 13.2161C41.7772 10.3127 37.2766 8.77595 32.7283 8.62661Z" fill="#ED3636"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8289 27.9817C41.4324 27.9817 42.7323 29.2816 42.7359 30.8894C42.7323 32.493 41.4324 33.7965 39.8289 33.7965C38.221 33.7965 36.9176 32.493 36.9176 30.8894C36.9176 29.2823 38.2217 27.9817 39.8289 27.9817ZM31.9995 27.9817C33.6066 27.9817 34.9065 29.2816 34.9065 30.8894C34.9065 32.493 33.6066 33.7965 31.9995 33.7965C30.391 33.7965 29.0911 32.493 29.0911 30.8894C29.0911 29.2823 30.391 27.9817 31.9995 27.9817ZM24.173 27.9817C25.7766 27.9817 27.08 29.2816 27.08 30.8894C27.08 32.493 25.7766 33.7965 24.173 33.7965C22.5659 33.7965 21.2653 32.493 21.2653 30.8894C21.2653 29.2823 22.5659 27.9817 24.173 27.9817ZM31.9995 15.4932C23.4733 15.4932 16.6025 22.1378 16.6025 30.8894C16.6025 35.0928 18.1919 38.8076 20.781 41.5333L19.8623 45.6521C19.5593 47.0075 20.4994 47.9191 21.7176 47.2407L25.7396 44.9972C27.6511 45.827 29.7652 46.2857 31.9995 46.2857C40.5286 46.2857 47.3951 39.6453 47.3951 30.8894C47.3951 22.1378 40.5286 15.4932 31.9995 15.4932Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Телефонна консультація</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<path d="M56.6553 40.4099C53.7747 37.5271 49.7776 36.3058 44.6443 37.6816L26.3396 19.3583L26.5815 18.4434C27.6358 14.4878 26.4966 10.2359 23.6096 7.34881C20.67 4.40696 16.491 3.32754 12.5388 4.41319C11.9752 4.56796 11.5365 5.01081 11.3872 5.57595C11.2379 6.14109 11.4016 6.74178 11.8147 7.1551L16.2222 11.5626C17.5107 12.8543 17.4982 14.923 16.2254 16.1992C14.9626 17.4653 12.8401 17.4633 11.5824 16.2024L7.17407 11.7937C6.76074 11.3801 6.15831 11.2179 5.59317 11.3681C5.02792 11.5182 4.5867 11.958 4.43248 12.5221C3.36269 16.4309 4.41509 20.6359 7.36875 23.5895C10.2482 26.471 14.2402 27.6966 19.3766 26.318L37.6827 44.6413C36.3166 49.773 37.495 53.7314 40.4143 56.6507C43.3576 59.5962 47.5386 60.6676 51.4822 59.5856C52.0459 59.4309 52.4847 58.988 52.6341 58.4228C52.7835 57.8577 52.6199 57.2569 52.2066 56.8435L47.8001 52.437C46.5115 51.1453 46.5241 49.0763 47.7969 47.8004C49.0754 46.5284 51.1932 46.5487 52.4399 47.7987L56.8485 52.2062C57.2619 52.6195 57.8643 52.7817 58.4293 52.6315C58.9945 52.4814 59.4357 52.0418 59.5899 51.4778C60.6597 47.5696 59.6075 43.3636 56.6553 40.4099Z" fill="#ED3636"></path>
+								<path d="M21.5593 33.1577L5.91961 48.7994C3.36013 51.3589 3.36013 55.521 5.91961 58.0804C8.47908 60.6398 12.6412 60.6398 15.2006 58.0804L30.84 42.4391L21.5593 33.1577ZM13.6593 52.9889C13.0183 53.6298 11.9804 53.6298 11.3394 52.9889C10.6986 52.348 10.6986 51.3099 11.3394 50.669L21.2904 40.7163C21.9312 40.0754 22.9695 40.0754 23.6102 40.7163C24.251 41.3571 24.251 42.3953 23.6102 43.0361L13.6593 52.9889Z" fill="#ED3636"></path>
+								<path d="M59.5174 7.30893L56.6891 4.48061C56.1568 3.94828 55.3307 3.84656 54.6851 4.23364L45.9847 9.45333C45.0692 10.0025 44.9138 11.2654 45.6685 12.0202L46.3611 12.7126L35.3164 23.7121L39.9577 28.3534L51.0024 17.3539L51.9779 18.3296C52.7327 19.0842 53.9957 18.9289 54.5448 18.0134L59.7645 9.313C60.1514 8.66736 60.0497 7.84125 59.5174 7.30893Z" fill="#ED3636"></path>
+						  </svg>
+						</div>
+						<h4>Сервісний центр</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+					<div class="advantages__grid-item">
+						<div class="advantages__grid-card-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+								<g clip-path="url(#clip0_70_661)">
+									 <path d="M31.999 19.8071C25.2749 19.8071 19.8047 25.2773 19.8047 32.0009C19.8047 38.725 25.2749 44.1952 31.999 44.1952C38.7226 44.1952 44.1928 38.725 44.1928 32.0009C44.1928 25.2773 38.7226 19.8071 31.999 19.8071ZM39.2387 29.7046L30.5029 38.4404C30.1362 38.8071 29.6552 38.9907 29.1748 38.9907C28.6943 38.9907 28.2138 38.8076 27.8471 38.4404L24.5088 35.102C23.7754 34.3691 23.7754 33.1801 24.5088 32.4467C25.2417 31.7133 26.4306 31.7133 27.164 32.4467L29.1748 34.4575L36.5835 27.0493C37.3164 26.3159 38.5053 26.3159 39.2387 27.0493C39.9721 27.7822 39.9721 28.9712 39.2387 29.7046Z" fill="#ED3636"></path>
+									 <path d="M59.1859 17.3648L59.1839 17.315C59.1561 16.7003 59.1375 16.0499 59.1263 15.3263C59.074 11.7975 56.2689 8.87852 52.7396 8.68125C45.3812 8.27061 39.6888 5.8712 34.8251 1.13049L34.7836 1.09094C33.1972 -0.363646 30.8041 -0.363646 29.2172 1.09094L29.1757 1.13049C24.3119 5.8712 18.6196 8.27061 11.2612 8.68174C7.73239 8.87852 4.92673 11.7975 4.87449 15.3267C4.86375 16.0455 4.8447 16.6959 4.81687 17.315L4.81394 17.4307C4.67088 24.9341 4.49314 34.2725 7.61716 42.7485C9.33493 47.4097 11.9365 51.4614 15.3491 54.792C19.2358 58.5849 24.3266 61.5961 30.4799 63.7416C30.6801 63.8115 30.8881 63.8681 31.1 63.9106C31.3988 63.9702 31.6996 63.9999 32.0004 63.9999C32.3012 63.9999 32.6024 63.9702 32.9008 63.9106C33.1127 63.8681 33.3222 63.811 33.5233 63.7407C39.6693 61.5913 44.7547 58.5786 48.638 54.7861C52.0492 51.4546 54.6507 47.4018 56.3699 42.7397C59.5057 34.2383 59.3284 24.8824 59.1859 17.3648ZM31.9994 47.9507C23.2045 47.9507 16.0498 40.7959 16.0498 32.001C16.0498 23.2061 23.2045 16.0513 31.9994 16.0513C40.7938 16.0513 47.9491 23.2061 47.9491 32.001C47.9491 40.7959 40.7938 47.9507 31.9994 47.9507Z" fill="#ED3636"></path>
+								</g>
+								<defs>
+									 <clipPath id="clip0_70_661">
+										  <rect width="64" height="64" fill="white"></rect>
+									 </clipPath>
+								</defs>
+						  </svg>
+						</div>
+						<h4>Оригінальна продукція</h4>
+						<p>Lorem ipsum dolor sit amet consectetur. A ultricies elit interdum ac. Vel sagittis dapibus sodales a nunc habitant cras.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__top-box">
+						<div class="footer__top-box-item1">
+							<img class="footer__main_logo" src="./img/footer__main_logo.svg" alt="Логотип">
+							<ul>
+								<li><a class="hvr-underline-reveal-red" href="#">Gentle Wind</a></li>
+								<li><a class="hvr-underline-reveal-red" href="#">Особливості</a></li>
+								<li><a class="hvr-underline-reveal-red" href="#">Продукція</a></li>
+								<li><a class="hvr-underline-reveal-red" href="#">Функції</a></li>
+								<li><a class="hvr-underline-reveal-red" href="#">Наші переваги</a></li>
+							</ul>
+						</div>
+						<div class="footer__top-box-item4">
+							<div class="contacts">
+									<span>КОНТАКТНА ІНФОРМАЦІЯ</span>
+									<ul>
+										<li class="footer__icons">
+											<p class="footer__icons-description adress">Адреса</p>
+											<a class="maps" href="https://www.google.com/maps/dir/48.4643741,35.0557173/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9F%D1%80%D0%BE%D0%B2%D1%96%D0%B0%D0%BD%D1%82%D1%81%D1%8C%D0%BA%D0%B0,+3,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@49.4249628,30.1189034,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40d4cf91c52fa09b:0x24ab73cd9430557!2m2!1d30.4721041!2d50.4513815?entry=ttu" target=”_blank”>Київ, Україна, вул. Провіантська 3</a>
+										</li>
+										<li class="footer__icons">
+											<p class="footer__icons-description">Контактний телефон</p>
+											<a class="footer__phone"href="tel:#+380000000000">+30 800 405 911</a>
+										</li>
+										<li class="footer__icons">
+											<p class="footer__icons-description">E-mail</p>
+											<a class="email" href="mailto:office@alpinair.com.ua">office@alpinair.com.ua</a>
+										</li>
+										<li class="footer__icons">
+											<p class="footer__icons-description schedule">Графік роботи</p>
+											<p>Пн-Сб 9:00-20:00 Нед-Вихідний</p>
+										</li>
+									</ul>
+							</div>
+						</div>
+
+							<div class="about__wrapper-form">
+								<h3>Залишились питання?</h3>
+								<p>Якщо у вас є питання щодо вибору кондиціонера, напишіть нам і ми вас проконсультуємо</p>
+								
+								<form action="#" method="POST" class="callback-form">
+									<label for="name">Ваше ім’я</label>
+									<input class="form__input form__input-name" type="text" name="name" required autocomplete="on">
+			
+									<label for="phone">Ваш телефон</label>
+									<!-- <input class="form__input phone form-control cellphone" type="tel" name="phone" placeholder="+380 (__) ___-__-__" required> -->
+									<input class="form__input phone phone__footer" type="tel" name="phone"required>
+			
+									<label for="message" id="message">Ваше питання</label><br>
+									 <textarea class="form__input" name="message" rows="2" cols="30"></textarea><br>
+									 <div class="about__wrapper-form-btn">
+										<button class="form__btn hvr-float-shadow" type="submit" value="Надіслати">
+											Надіслати
+										</button>
+									</div>
+								</form>
+							</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/jquery.maskedinput.js"></script>
+		<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+// .path{
+// 	padding: 160px 0px 60px 0px;
+// 	background: rgba(78,85,172, 0.9);
+// 	position: relative;
+// 	background-image: url('./../img/path__bg.jpg');
+	
+	
+// }	
+.path {
+	padding: 160px 0px 60px 0px;
+	// background-color: rgba(78, 85, 172, 0.9);
+	position: relative;
+	background-image: url('./img/path__bg.jpg');
+}
+
+/* Добавляем линейный градиент поверх изображения */
+.path .gradient-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(59,66,159,0.6) 0%, rgba(59,66,159,0.6) 100%);
+	pointer-events: none; /* Чтобы не мешал кликам на содержимом секции */
+	z-index: 0;
+}
+
+.path__row{
+	padding: 50px 0px 0px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap:30px;
+
+}
+
+.path__secondary__title{
+	z-index: 100;
+	color: $white;
+}
+.path__title h2{
+	z-index: 100;
+	font-family: 'Prosto One', sans-serif;
+	position: relative;
+	color: $white;
+	text-align: center;
+	&::after{
+		content: "";
+		position: absolute;
+		top: -80px;
+		left: 5%;
+		width: 1250px;
+		height: 300px;
+		background-image: url("./../img/HOW_IT_WORKS.png");
+		background-repeat: no-repeat;
+		opacity: 0.5;
+		// animation: fadeInDown 1.5s ease-out 1.5s forwards;
+		z-index: -1;
+	}
+	&::before{
+		z-index: 100;
+		content: "";
+		position: absolute;
+		top: 70%;
+		left: 48%;
+		width: 32px;
+		height: 2px;
+		background-image: url("./../img/mini_red_line.svg");
+		background-repeat: no-repeat;
+	}
+}
+.path__description{
+	position: relative;
+	z-index: 10;
+	color: $white;
+	text-align: center;
+}
+.path__row-item{
+	z-index: 100;
+	width: 273px;
+	padding: 20px;
+	border-radius: 16px;
+	
+}
+.path__row-item h4{
+	font-family: 'Prosto One', sans-serif;
+	font-size: 20px;
+	color: $white;
+	padding-bottom: 25px;
+}
+.path__row-item p{
+	color: $white;
+	font-size: 14px;
+
+}
+
+.path__row-item1{
+	z-index: 1000;
+	position: relative;
+	background-color: $white;
+	border-radius: 16px;
+	&::before{
+		z-index: 100;
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 35%;
+		width: 32px;
+		height: 2px;
+		background-image: url("./../img/mini_red_line.svg");
+		background-repeat: no-repeat;
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		top: -30%;
+		left: -10%;
+		width: 145px;
+		height: 100px;
+		background-image: url("./../img/path_01.svg");
+		background-repeat: no-repeat;
+		z-index: 5;
+	}
+}
+.path__row-item1 h4{
+	z-index: 102;
+	font-family: 'Prosto One', sans-serif;
+	font-size: 20px;
+	color: $black;
+	padding-bottom: 25px;
+}
+.path__row-item1 p{
+		z-index: 102;
+	color: $gray;
+	font-size: 14px;
+	
+}
+
+.path__row-item2{
+	position: relative;
+	&::before{
+		z-index: 100;
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 8%;
+		width: 32px;
+		height: 2px;
+		background-image: url("./../img/mini_red_line.svg");
+		background-repeat: no-repeat;
+	}
+	&::after{
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -25%;
+		left: -30%;
+		width: 170px;
+		height: 100px;
+		background-image: url("./../img/path_02.svg");
+		background-repeat: no-repeat;
+	}
+}
+.path__row-item3{
+	position: relative;
+	&::before{
+		z-index: 100;
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 8%;
+		width: 32px;
+		height: 2px;
+		background-image: url("./../img/mini_red_line.svg");
+		background-repeat: no-repeat;
+	}
+	&::after{
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -25%;
+		left: -30%;
+		width: 170px;
+		height: 100px;
+		background-image: url("./../img/path_03.svg");
+		background-repeat: no-repeat;
+	}
+}
+.path__row-item4{
+	position: relative;
+	&::before{
+		z-index: 100;
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 8%;
+		width: 32px;
+		height: 2px;
+		background-image: url("./../img/mini_red_line.svg");
+		background-repeat: no-repeat;
+	}
+	&::after{
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -25%;
+		left: -30%;
+		width: 170px;
+		height: 100px;
+		background-image: url("./../img/path_04.svg");
+		background-repeat: no-repeat;
+	}
+}
+
+
+.none{
+	display: none;
+}

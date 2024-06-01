@@ -1,0 +1,39 @@
+.advantages{
+	padding: 200px 0;
+}
+.advantages__grid{
+	padding: 60px 0px 0px 0px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows:repeat(2, 1fr);
+	gap: 20px;
+	transition: all 0.4s ease;
+
+}
+.advantages__grid-item{
+	padding: 25px;
+	transition: all 0.5s ease;
+	border-radius: 16px;
+		&:hover{	
+			background-color: $violet;
+		}
+
+}
+.advantages__grid-item:hover h4,
+.advantages__grid-item:hover p {
+    color: $white;
+}
+.advantages__grid-item p{
+	font-size: 14px;
+	color: $gray;
+
+
+}
+.advantages__grid-item h4{
+	font-family: 'Prosto One', sans-serif;
+	padding: 40px 0px 15px 0px;
+}
+
+.advantages__grid-item:hover .advantages__grid-card-icon svg path {
+	fill: #fff;
+}

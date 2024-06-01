@@ -1,0 +1,42 @@
+.functional{
+	padding-bottom: 120px;
+}
+.functional__grid{
+	padding: 60px 0px 0px 0px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows:repeat(3, 1fr);
+	gap: 20px;
+	transition: all 0.4s ease;
+
+}
+.functional__grid-item{
+	padding: 25px;
+	transition: all 0.5s ease;
+	border-radius: 16px;
+		&:hover{	
+			background-color: $violet;
+			color: white;
+		}
+
+}
+
+.functional__grid-item:hover .functional__grid-card-icon svg path {
+	fill: #fff;
+}
+
+.functional__grid-item:hover h4,
+.functional__grid-item img:hover,
+.functional__grid-item:hover p {
+    color: $white;
+}
+.functional__grid-item p{
+	font-size: 14px;
+	color: $gray;
+
+
+}
+.functional__grid-item h4{
+	font-family: 'Prosto One', sans-serif;
+	padding: 40px 0px 15px 0px;
+}

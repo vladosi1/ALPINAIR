@@ -1,0 +1,304 @@
+.products{
+	padding: 50px 0px 190px 0px;
+}
+.products__wpapper-box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.products__box-options{
+	font-size: 20px;
+	color: $gray;
+
+}
+.products__box-item-title h3 {
+	font-family: 'Prosto One', sans-serif;
+	font-size: 32px;
+	padding: 40px 0px 10px 0px;
+
+}
+.red{
+	color: $red;
+	font-family: 'Prosto One', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.products__box-options{
+	color: $gray;
+	padding-bottom: 35px;
+}
+.products__box-item-description{
+	width: 600px;
+}
+.products__box-item-description p{
+	color: $gray;
+}
+.products__box-item-characteristics span{
+	color: $gray;
+}
+.products__box-item-characteristics-table-td tr td:first-child {
+	padding-right: 200px;
+	padding-bottom: 30px;
+}
+.products__box-item-characteristics h3, .products__box-item-features h3{
+	font-weight: 600;
+	padding: 2rem 0;
+	color: $red;
+}
+.features__grid{
+	position: relative;
+	font-size: 14px;
+	padding-left: 35px;
+	width: 600px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 16px 50px;
+}
+.features__grid-item{
+	display: flex;
+	
+}
+.test1{
+	max-width: 50px;
+	max-height: 50px;
+	width: 40px;
+}
+
+.features__grid-item1{
+	position: relative;
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon1.svg");
+		background-repeat: no-repeat;
+}
+}
+.features__grid-item2{
+	position: relative;
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon2.svg");
+		background-repeat: no-repeat;
+}
+}
+.features__grid-item3{
+	position: relative;
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon3.svg");
+		background-repeat: no-repeat;
+	
+}
+}
+.features__grid-item4{
+	position: relative;
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon4.svg");
+		background-repeat: no-repeat;
+}
+}
+.features__grid-item5{
+	position: relative;
+
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon5.svg");
+		background-repeat: no-repeat;
+}
+}
+.features__grid-item6{
+	position: relative;
+
+	&::before{
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -43px;
+		width: 35px;
+		height: 35px;
+		background-image: url("./../img/features__icon6.svg");
+		background-repeat: no-repeat;
+}
+}
+.btn__buy{
+	background: $red;
+	padding: 16px 56px;
+	color: $black;
+	border-radius: 100px;
+	transition: all 0.3s ease;
+	&:hover{
+		background: $violet;
+		color: #fff;
+	}
+}
+
+.row-reverse{
+	flex-direction: row-reverse;
+}
+
+
+
+
+
+
+
+
+
+
+// pop up
+#popup {
+	display: none;
+	background-color: #fff; /* Set background color */
+	padding: 20px; /* Add padding for content */
+	border-radius: 20px;
+}
+
+.form-title {
+	text-align: center;
+	color: #3A4750; /* Set header text color to black */
+	font-size: 24px; /* Set header font size */
+	font-weight: 600;
+}
+
+.form-note {
+	color: #838383; /* Set note text color */
+	margin-bottom: 14px; /* Add margin at the bottom */
+}
+
+.form-group {
+	margin-bottom: 15px; /* Add margin at the bottom of each form group */
+}
+
+.control-label {
+	color: #303030; /* Set label text color to black */
+	font-weight: bold; /* Make label text bold */
+}
+
+.form-control {
+	width: 100%; /* Make form controls take full width */
+	padding: 8px; /* Add padding for form controls */
+	border: 1px solid #ccc; /* Add a border for form controls */
+	border-radius: 4px; /* Add border-radius for rounded corners */
+}
+
+.btn-submit {
+	display: inline-block;
+	text-align: center;
+	background-color: $red; /* Set button background color to red */
+	color: #fff; /* Set button text color to white */
+	padding: 10px 20px; /* Add padding for the button */
+	border: none; /* Remove button border */
+	border-radius: 4px; /* Add border-radius for rounded corners */
+	cursor: pointer; /* Change cursor to pointer on hover */
+}
+.btn-submit:active,
+.btn-submit:focus {
+    background-color: $red!important; /* Override default styles on button click and focus */
+	 color: #fff;
+}
+.form-control.name:focus, .form__input.phone:focus {
+	box-shadow: 0 0 9px #838383; /* Set box shadow to red on focus */
+}
+
+
+//Slider
+.swiper-container {
+	display: flex;
+	flex-direction: column;
+
+}
+.swiper-box{
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.gallery-thumbs .swiper-slide {
+	width: 20%;
+	height: 100%;
+	opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+	opacity: 1;
+}
+.gallery-thumbs {
+	height: 120px;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+.swiper-slide-container {
+	text-align: center;
+	 font-size: 18px;
+	 background: #fff;
+		height:100%;
+		max-width: 600px;
+		margin:auto;
+		 /* Center slide text vertically */
+		 display: -webkit-box;
+		 display: -ms-flexbox;
+		 display: -webkit-flex;
+		 display: flex;
+		 -webkit-box-pack: center;
+		 -ms-flex-pack: center;
+		 -webkit-justify-content: center;
+		 justify-content: center;
+		 -webkit-box-align: center;
+		 -ms-flex-align: center;
+		 -webkit-align-items: center;
+		 align-items: center;
+ }
+
+.gallery-top {
+	height: 80%;
+	width: 100%;
+}
+.gallery-thumbs {
+	height: 20%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+	width: 20%;
+	height: 100%;
+	opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+	opacity: 1;
+}
